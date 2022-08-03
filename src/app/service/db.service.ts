@@ -10,12 +10,15 @@ export class DbService {
 
   constructor(private authService:AuthService) { }
   saveQuote(quote:string|null){
+    const d=new Date()
     firebase.firestore().collection('quotes').add({
       text:quote,
-      by:this.authService.getUid()
+      by:this.authService.getUid(),
+      time:d.toString()
     }).then((data)=>{
       M.toast({html: 'Quote saved succesfully',classes:'green'})
     }).catch(err=>{
+      console.log(err)
       M.toast({html: 'Error saving quote',classes:'red'})
     })
   }

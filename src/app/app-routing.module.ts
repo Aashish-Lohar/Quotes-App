@@ -6,10 +6,12 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { RegisterComponent } from './register/register.component';
+import { YourQuotesComponent } from './your-quotes/your-quotes.component';
 
 const routes: Routes = [
     {path:'login',component:LoginComponent},
     {path:'register',component:RegisterComponent},
+    {path:'yourQuotes',component:YourQuotesComponent,canActivate:[AuthGuard]},
     {path:"",component:HomeComponent
     // redirectTo:'/login',pathMatch:'full'
   },

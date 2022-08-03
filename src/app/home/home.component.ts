@@ -12,8 +12,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.db.getAllQuotes().then(docsData=>{
-      this.allQuotes= docsData.docs.map(doc=>doc.data())
-      console.log(this.allQuotes)
+      this.allQuotes= docsData.docs.map(doc=>doc.data());
+      this.allQuotes.sort((a,b)=>{
+       return Number(new Date(a.time))-Number(new Date(b.time))
+      })
+      console.log('allQuotes',this.allQuotes)
     })
   }
 

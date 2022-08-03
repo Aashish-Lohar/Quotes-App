@@ -15,7 +15,10 @@ export class AuthService {
     return this.userID
   }
   isAuthenticated(){
-    const uid=localStorage.getItem('userID');
+    // const fir=firebase.auth().currentUser?.email
+    // console.log('fir',fir)
+    // const uid=localStorage.getItem('userID');
+    const uid=firebase.auth().currentUser?.email;
     if(uid) this.userID=uid
     return uid?true:false
   }
@@ -53,6 +56,7 @@ export class AuthService {
       this.userID=undefined
       localStorage.removeItem('userID')
     })
+    this.router.navigate(['/'])
   }
 
 }

@@ -11,6 +11,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { HomeComponent } from './home/home.component';
 import { CreateQuoteComponent } from './create-quote/create-quote.component';
 import { UsernamePipe } from './username.pipe';
+import { YourQuotesComponent } from './your-quotes/your-quotes.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UsernamePipe } from './username.pipe';
     NotfoundComponent,
     HomeComponent,
     CreateQuoteComponent,
-    UsernamePipe
+    UsernamePipe,
+    YourQuotesComponent
   ],
   imports: [
     BrowserModule,

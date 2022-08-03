@@ -1,0 +1,16 @@
+.row{
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    margin: 0;
+    font-size:2rem !important
+}
+span{
+    font-size: 0.75rem;
+}
+.card{
+    width: 30rem;
+    background-image: linear-gradient( 135deg, #3B2667 10%, #BC78EC 100%);
+}

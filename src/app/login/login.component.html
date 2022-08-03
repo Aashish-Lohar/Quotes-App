@@ -6,6 +6,6 @@
     <h5 class="red-text"[hidden]="email.valid || email.untouched">Enter correct email</h5>
     <input type="password" [formControl]="password"/>
     <h5 class="red-text"[hidden]="password.valid || password.untouched">Password Required and must be min 6 digits</h5>
-    <button class="btn red" [disabled]="loginForm.invalid" (click)="login()">Login</button>
+    <button class="btn green" [disabled]="loginForm.invalid" (click)="login()">Login</button>
     <button class="btn red" style="margin-left: 20px;" (click)="reset()">Reset</button>
 </form>

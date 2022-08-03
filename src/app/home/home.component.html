@@ -1,6 +1,17 @@
 <div class="container">
-    <div *ngFor="let q of allQuotes">
-        <h4>{{q.text}}</h4>
-        <h6 style="text-align: right;">-{{q.by| username}}</h6>
-    </div>
+    <div class="row ">
+        <div class="s12 m6 ">
+          <div *ngFor="let q of allQuotes" class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <h2 class="card-title center">{{q.text}}</h2>
+              <h6 >
+                  <span>{{q.time|date}}</span><span class="right"> --{{q.by| username}}</span>
+
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+              
+
 </div>

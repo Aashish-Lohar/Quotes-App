@@ -1,9 +1,10 @@
-<nav class="pink">
+<nav class="navbar">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo left" >Quotes App</a>
+      <a routerLink="/" class="brand-logo left" style="margin-left: 1rem;">Quotes App</a>
       <ul id="nav-mobile" class="right ">
         <li *ngIf="!isAuth()" routerLinkActive="active"><a routerLink="/login">Login</a></li>
         <li *ngIf="!isAuth()" routerLinkActive="active"><a routerLink="/register">Register</a></li>
+        <li *ngIf="isAuth()" routerLinkActive="active"><a routerLink="/yourQuotes">Your Quotes</a></li>
         <li routerLinkActive="active"><a routerLink="/create">Create Quote</a></li>
         <button *ngIf="isAuth()" class="btn black " (click)="logout()">Logout</button>
       </ul>
