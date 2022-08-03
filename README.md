@@ -5,7 +5,7 @@ Quotes app, the angular web app which gives you facilty to publish your thoughts
 # Features
 1.Authentication like login and register.
 2.Firebase Database
-3.Angular 13 fetures like routing, services, pipes, directives, auth guard, etc.
+3.Angular 13 features like routing, services, pipes, directives, auth guard, etc.
 
 # Deployement on Firebase
 Live link :https://quotes-app-925e6.web.app/
